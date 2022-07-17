@@ -1,18 +1,20 @@
-source "https://rubygems.org/"
-git_source(:github) { |repo| "https://github.com/#%7Brepo%7D.git" }
+# frozen_string_literal: true
 
-gem "rails"
-gem "sprockets-rails"
+source "https://rubygems.org/"
+git_source(:github) { |_repo| "https://github.com/#%7Brepo%7D.git" }
+
+gem "bootsnap", require: false
+gem "cssbundling-rails"
+gem "jsbundling-rails"
 gem "pg"
 gem "puma"
-gem "jsbundling-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
-gem "cssbundling-rails"
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-gem "bootsnap", require: false
+gem "rails"
 gem "simple_form"
-gem 'slim'
+gem "slim"
+gem "sprockets-rails"
+gem "stimulus-rails"
+gem "turbo-rails"
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem "pry-byebug"
